@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Simple Coffee Script</title>
+<body>
+
+<script type="text/javascript">
+
+/* Simple experimental site, that calculates a persons age based on the birthyear entered. */
+
+/*  Declare variables */
+	var Birth_Year, Current_Year, Your_age;
+
+/* Add information from user to variable */
+	Birth_Year = Number(prompt("Provide your birthyear, 1992 will change the 			color!"));
+	Current_Year = 2023;
+	document.write   ("<br><h1> Current_Year is " + Current_Year + "</h1>");
+
+/*  Variable assignment */
+	Your_Age = Current_Year - Birth_Year;
+
+/* If and Else Statements */
+
+	if (Your_Age == 31)
+
+{ 
+/* If 1992 color changes to one color */
+    alert("It was 1992, so we will change the background to orange.")
+			document.write("Your_Age is " + Your_Age + "</h3>");
+   		 	document.write("<body bgcolor='#FFA500'>");
+    		document.write("<font color='#EEEEEE'>");
+}
+
+else 
+
+{ 
+
+ /* NOT 1992, so another color. */
+	 alert("You get another color, and still get your age.")
+			document.write("Your_Age is " + Your_Age + "</h3>");
+            document.write("<body bgcolor='#32CD32'>");
+            document.write("<font color='#EEEEEE'>")
+}
+	
+
+</script>
+</head>
+<body>
+<p><b>Says PuppyCat!</b></p>
+<a href="https://imgur.com/GlZIeJa"><img src="https://i.imgur.com/GlZIeJa.jpg" title="source: imgur.com" /></a>
+<p>PuppyCat predicts your age!!<p>
+</body>
+</html>
