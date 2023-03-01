@@ -1,0 +1,62 @@
+<html>
+<head>
+
+
+<script type="text/javascript">
+
+/* Simple function that takes age in years and converts into days*/
+
+function convertAgeToDays(age) {
+
+/* My variables */
+
+var age_days;
+var name;
+
+name = document.age_calc.fname.value + " " + document.age_calc.lname.value;
+
+/* 365 days in a year */
+
+age_days = document.age_calc.age.value * 365;
+
+//alert("your age in days is " + age_days.);
+
+document.getElementById("convertAgeToDays(age)").innerHTML = "<h3>" + name + ", " + "your age in days is " + age_days + "</h3>";
+}
+
+/* For fun I experimented with DOM and background change */
+
+function myFunction() {
+  document.body.style.backgroundColor = "#f3f3f3";
+  document.body.style.backgroundImage = "url('https://i.imgur.com/zUa72vV.jpg')";
+}
+  
+</script>
+
+<!-- End of javascript and start of HTML-->
+
+</head>
+<body>
+<button type="button" onclick="myFunction()">Set background image</button>
+<form name="age_calc">
+<br>
+<br>
+<label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+  <br>
+  <br>
+  
+  <!--Instructions-->
+  Type in your age, or use the arrows. 
+  <!-- -->
+  
+  <input type="number" name="age" min="5" size="2" placeholder="5">
+  <br>
+  <input type="button" name="button" onclick="convertAgeToDays(age)"value="Days Old"/>
+<p id="convertAgeToDays(age)"> </p>
+
+</form>
+</body>
+</html>
