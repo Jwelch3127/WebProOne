@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<title>College Application Form</title>
+<!--Begining of CSS (Cool Style Section).. I know its easier to link a style sheet. But for the sake of this form, I just did this.-->
+
+<style>
+
+/*Background Color*/
+
+body {
+  background-color: #fbeca3;
+}
+
+/*Header creation and style*/
+
+.header {
+overflow: hidden;
+background-color:#5c1014;
+color: #fbeca3;
+padding:20px 20px;
+}
+
+/*Heading two and paragraph styling*/
+
+H2{Color: #5c1014
+}
+P{Color: #5c1014
+}
+
+/*My Meme Image Styling*/
+
+img {
+  padding: 14px 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Fancy Buttons*/
+
+input[type=button]{
+  width: 100%;
+  background-color: #5c1014;
+  color: #fbeca3;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*Labels of Form Fields can be styled as well...Who knew*/
+
+label {color:#5c1014}
+
+/*Cool Form Fields*/
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #5c1014;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f3ead8;
+  color: #5c1014;
+}
+
+/*Cool Age Field*/
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #5c1014;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f3ead8;
+  color: #5c1014;
+}
+
+</style>
+
+<!--End of CSS (Cool Style Section) style -->
+
+<body>
+<head>
+
+<!-- Meta tags -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Begining HTML and Heading-->
+<div class="header">
+<h1 style=text-align:center>Middle Earth Early College Enrollment</h1>
+</div>
+
+<!--My Meme Image-->
+<div id="img">
+<img src="https://i.imgur.com/3Ny6GwZ.jpg" alt="Paris" style="width:50%;">
+</div>
+
+<!--Begining Paragraphs-->
+
+<h2>Information on School Choices</h2>
+<p>Click on each school to learn more before making your final selection.</p>
+
+
+
+<!--Begining JavaScript-->
+
+<!--Information on Solders of Sauron Academy (SOSA)-->
+
+<input type="button" onclick="choice1()" value="Solders of Sauron Academy"/>
+
+<div id="sosa">
+<p>Attention maggots! Get ready to be the next to rise to the occasion and dominate MiddleEarth. If you have got nowhere else to go, Mordor is always keeping an eye out for fresh blood. Join the mighty armies of Sauron. Not an orc, no problem, we accept all races into our ranks. Do you have what it takes to serve "The One".</p>
+</div>
+
+<script>
+function choice1() {
+  var x = document.getElementById("sosa");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<!--Information on University of Rivendale (UOR)-->
+
+<input type="button" onclick="choice2()" value="University of Rivendell"/>
+
+<div id="uor">
+<p>Ah, Rivendell, House of Elrond. Here you will find nothing but peace, prosperity, and never-ending scenic views. We at Rivendell will tell you there is no finer arts institution anywhere in middle-earth, apart from the Undying Lands. We have courses on Elvish history, Elvish music, Elvish art, Elvish theater, Elvish literature, and many courses on Middle Earth languages (NO BLACK SPEECH). <p>Here at the University of Rivendell all are welcome, but we may not be keen on letting you leave anytime soon, as we consider ourselves eternal learners and expect the same of our students. As a disclaimer our meal options are limited, as we only serve vegetarian dishes – but do not be dissuaded from our state-of-the-art courses based on a vegetarian palette alone. We will ensure you have all the nutrients you need, as we fiercely believe the key to a strong mind is a strong body. So, if you don’t mind the taste of greens and have a thirst for knowledge that you consider to be eternal, then consider the House of Elrond your home as well. Before submitting your application be warned we have a zero tolerance policy for Black Speech and the mentioning of the “Ring of Power” - no exceptions.</p>
+<p>We welcome you and will wish you nothing but the best in all your educational and artistic endeavors!</p>
+</div>
+
+<script>
+function choice2() {
+  var y = document.getElementById("uor");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
+</script>
+
+<!--Information on Laketown Community College (LCC)-->
+
+<input type="button" name="button" onclick="choice3()" value="Laketown Community College"/>
+
+<div id="llc">
+<p>Welcome to the mysterious world of men. Here at Laketown, or as the locals call it, Escaroth, you will find a semi-welcoming crowd, but don’t let mixed reviews turn you away. Ever since Bard, the humble bargeman and interim ruler has taken up the masters mantle things have slowly been turning around for this sleepy and almost forgotten town. You will no longer find dragons brooding over these lands and the board of trustees is locally based just across the water at the Lonely Mountain and are hard at work to fund well thought out and profitable programs. <p>Here at Laketown Community College there is a vast wealth of knowledge to be gained. We have hardy programs in Escaroth history and Dwarvish studies, programs in trading, stocks, and business management as well as many opportunities to gain leadership experience. Indeed, the former center of all trade in the North  is well on its way to becoming that shining beacon once more, that being said, there is no better time to invest in your future.</p>   
+</div>
+
+<script>
+function choice3() {
+  var z = document.getElementById("llc");
+  if (z.style.display === "none") {
+    z.style.display = "block";
+  } else {
+    z.style.display = "none";
+  }
+}
+
+</script>
+
+<!--Button and Information on Tradeschool of Morial (TOM)-->
+
+<input type="button" name="button" onclick="choice4()" value="Tradeschool of Moria"/>
+
+<div id="tom">
+<p>If you are a fan of rock and heavy metal, then you have made the right choice. If you are not frightened off by the stray Orc or Goblin… or the occasional Balrog then you will find no finer trade school than that of Moria. At the Trade School of Moria, you will find that our dining services are second to none. Here in the mines, we have grand feasts of malt beer and meat ripe off the bone. We offer a wide array of programs including archeology, architecture, and blacksmithing, just to name a few. We even have certificate programs in such things as tinkering and toy-making. Students are even encouraged to join our very own marching band, “Drums in the Deep.” Prepare to break some ground and dig deep in your professional pursuits.</p> 
+</div>
+
+<script>
+function choice4() {
+  var a = document.getElementById("tom");
+  if (a.style.display === "none") {
+    a.style.display = "block";
+  } else {
+    a.style.display = "none";
+  }
+}
+
+</script>
+
+<!-- End of School Information Buttons -->
+
+<!--Begining of javascript for form submission-->
+
+<script
+type="text/javascript">
+function formSubmition() {
+
+/* My variables */
+
+var school_selection;
+var name;
+var race;
+
+name=document.college_form.fname.value + " " + document.college_form.lname.value;
+
+race=document.college_form.race.value;
+
+school_selection = document.college_form.schoolselection.value
+
+/*Javascript code for returning submit function*/
+
+document.getElementById("formSubmition()").innerHTML= "<h3>" + name + ", " + "the " + race + ". " + "Thank you for your submission! You have successfully joined the waiting list for " + school_selection + "</h3>"; 
+}
+</script>
+
+<!--Begining of HTML for Form-->
+
+
+<body>
+
+<h2>Instructions for Form Submission</h2>
+<p>After carefully reading through the four school selections, enter the demographical information below. Please look over your information to ensure it is correct and accurate. Once you are satisfied, click the submit button at the end of the form. Thank you!</p>
+
+<div>
+  <form name="college_form">
+<br>
+<br>
+
+<!-- First Name Field-->
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Student first name..">
+    
+<!-- Last Name Field-->
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Student last name..">
+    
+<!--Sex Field-->    
+
+<label for="sex">Sex</label>
+    <input type="text" id="sex" name="sex">
+    
+<!--Age Field-->
+
+<label for="age">Age</label>
+    <input type="number" id="age" name="age" min="0" size="2" placeholder="0">
+
+<!--Race Field-->
+
+<label for="race">Race</label>
+    <select id="race" name="race">
+    <option value="Select Race">Select a Race</option>
+      <option value="human">Human</option>
+      <option value="elf">Elf</option>
+      <option value="hobit">Hobbit</option>
+      <option value="dwarf">Dwarf</option>
+    </select>
+
+<!--School Selection Field-->
+
+    <label for="schoolselection">School Selection</label>
+    <select id="schoolselection" name="schoolselection">
+    <option value="School Selection">Select a School</option>
+      <option value="Solders of Sauron Academy">Solders of Sauron Academy</option>
+      <option value="University of Rivendel">University of Rivendel</option>
+      <option value="Laketown Community College">Laketown Community College</option>
+       <option value="Tradeschool of Moria">Trade school of Moria</option>
+    </select>
+    
+<!--Button for Submission--->
+  
+    <input type="button" name="button" onclick="formSubmition()" value="Submit"/>
+   <p id="formSubmition()"></p>
+  </form>
+</div>
+
+</body>
+</html>
