@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+
+<!--Meta Tags-->
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>My Pets</title>
+
+<!--Beginning of CSS-->
+
+<style>
+/*Background Image*/
+body {
+background-image: url("https://i.imgur.com/3rSRBo5.jpg");
+}
+/*Header Styling*/
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #A9a9a9;
+  color: #301934;
+  font-size: 20px;
+}
+/*Image Styling*/
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  color: white;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+ padding: 5px;
+  text-align: center;
+  background: #A9a9a9;
+  color: #301934;
+  }
+</style>
+<!--js defining 3 dog variables, properties (Name, Age, Breed, favorite things), and method to display dog info--> 
+    
+<script>
+    
+/*Variable 1 - Dog One: Ginger*/
+    
+		var dog1 = {
+	  		name: "Ginger",
+            age: "11",
+	  		breed: "jackrussel terrier-mix",
+    		favoriteThing: "eating, sleeping and being left alone.",
+    		
+			
+			describeDog: function ()
+  			{ 
+  				return ("This is " + this.name + ". She is a " + this.age + " year old " + this.breed + " and enjoys " + this.favoriteThing );
+  			}
+		};
+        
+/*Variable 2 - Dog Two: Cleo*/
+
+		var dog2 = {
+	  		name: "Cleo",
+	  		age: "5",
+    		breed: "lab-mix",
+    		favoriteThing: "eating, playing, and pats.",
+			
+			describeDog: function ()
+  			{ 
+  				return ("This is " + this.name + ". She is a " + this.age + " year old " + this.breed + " and enjoys " + this.favoriteThing);
+  			}
+		};
+        
+/*Variable 3 - Dog Three: Eevee*/
+
+		var dog3 = {
+	  		name: "Eevee",
+	  		age: "3",
+    		breed: "siberian husky",
+    		favoriteThing: "running away, eating, and receiving attention.",
+			
+			describeDog: function ()
+  			{ 
+  				return ("This is " + this.name + ". She is a " + this.age + " year old " + this.breed + " and enjoys " + this.favoriteThing );
+  			}
+		};
+		
+</script>
+</head>
+
+<body>
+	
+	<!--Begining of HTML-->
+    
+    <!--Header-->
+    <!--Header HTML-->
+<div class="header">
+  <h1>The Welch Pack</h1>
+  </div>
+  
+<!--Dog Image 1: Ginger-->
+
+<div class="row">
+  <div class="column">
+<img src="https://i.imgur.com/0c1qg1U.jpg" alt="Small dog, Ginger" style="width:100%">
+<!--Button Information For Variable One-->
+<p id="ginger"> </p>
+<button onclick="document.getElementById('ginger').innerHTML = dog1.describeDog()">Meet Ginger </button>
+</div>
+
+
+<!--Dog Image 2: Cleo-->
+
+<div class="column">
+<img src="https://i.imgur.com/uW0219C.jpg" alt="Large Dog, Cleo" style="width:100%">
+<!--Button Information For Variable Two-->
+
+	<p id="cleo"> </p>
+ 		<button onclick="document.getElementById('cleo').innerHTML = dog2.describeDog()">Meet Cleo </button> 
+</div>
+
+
+<!--Dog Image 3: Eevee-->
+
+<div class="column">
+<img src="https://i.imgur.com/D1d0XkI.jpg" alt="Medium Dog, Eevee" style="width:100%">
+<!--Button Information For Variable Three-->
+    			<p id="eevee"> </p>
+ 		<button onclick="document.getElementById('eevee').innerHTML = dog3.describeDog()">Meet Eevee </button>
+</div>
+</div>
+
+	
+	<!--this is the footer-->
+	<div class="footer">
+		<a href="https://jwelch3127.github.io/WebProOne/week3.html">Home Page</a>
+  	</div>
+		 
+</body>
+</html>
