@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<!--CSS Styling-->
+<style>
+body {background-color: #D2B48C}
+
+/* Header Styling */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #F5F5DC;
+  color:#654321;
+  font-size: 20px;
+}
+
+/* Text Styling */
+h1, h2, h3 {text-align: center;color:#654321;}
+p {color:black;}
+
+/* Creating Row for Images */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}  
+
+/* Display Properties for 3 images */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #F5F5DC;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: #654321;
+  font-size: 15px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);}
+  
+/* End of Image Display Properties */ 
+
+/* Form Field Styling */ 
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+input[type=button], input[type=submit], input[type=reset]
+{
+background-color: #F5F5DC;
+  border: none;
+  color: #654321;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #F5F5DC;
+  border: none;
+  color: #654321;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Footer Styling */ 
+.footer {
+  padding: 15px;
+  text-align: center;
+  background: #F5F5DC;
+  color:#654321;
+  font-size: 20px;
+}
+</style>
+<!-- End of CSS Styling -->
+   
+<!-- Meta Tags -->
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Artist Sign-Up</title>
+    
+<!-- Java Script -->
+		<script type="text/javascript">
+    
+/* Array of elements*/
+        var artist_selection = ["Van Gogh" , "Da Vinci" , "Michelangelo" , "Dali", "Picasso", "Andy Warhol"];
+		var artist;
+		
+		var learner;
+		
+/* function for "Off Limits artists and those already selected */
+		function IsArtistChosen () {
+     		var learner = document.getElementById("learner_name").value;
+    		var newArtist = document.getElementById("learner_artist").value;
+			
+			var foundIt = false;
+/*if artist is on this list learner asked to chose another*/
+				for (i = 0; i < artist_selection.length; i = i + 1)  {
+        			if (newArtist == artist_selection[i])  {
+            			foundIt = true;
+            			document.getElementById("output").innerHTML = "Sorry " + learner +", " + newArtist + " is already selected, OR is off limits. Please pick again.";
+				 showList();   
+				}
+        		}
+/*if artist is not on list it will be added*/
+        			if ( foundIt == false) {
+            			document.getElementById("output").innerHTML = "Awesome! The artist, " + newArtist + " has not been found, so " +learner+ " and " +newArtist + " are being added to the list.";
+            			artist_selection.push(newArtist)
+					showList();
+            		}
+    	}
+		function showList() {
+       		document.getElementById("list").innerHTML = "Here is the current list of artists already chosen Or off limits " + artist_selection; 
+        }
+        function showList() {
+        document.getElementById("signupform").reset();
+        }
+</script>
+</head>
+<!-- End of JS -->
+<body>
+<!-- Start of HTML -->
+
+<!-- Header -->
+<div class="header">
+  <h1>Art History 101</h1>
+</div>
+
+<!--Header Image-->
+	<div class="topnav">
+		<img src = "https://i.imgur.com/GjxsxcZ.jpg" width="100%" align ="Center">
+		<h1 style="background-color:#F5F5DC;">Artist Case Study Sign Up</h1>
+        <p>Hover over the artwork to see some quick facts:</p>
+	</div>
+   
+<!-- Three Images in Row and Display Information for Images -->
+	 <div class="row">
+  <div class="column">
+  <div class="container">
+    <img src="https://i.imgur.com/9Dkiv08.jpg" alt="Cambells Soup Cans-Andy Warhol" style="width:100%">
+     <div class="overlay">
+    <div class="text"><p>Andy Warhol, 1962<p><p>Cambell's Soup Cans</p><p>Pop Art</p></div>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+  <div class="container">
+    <img src="https://i.imgur.com/gK05gDT.jpg" alt="Van Gogh" style="width:100%">
+     <div class="overlay">
+    <div class="text"><p>Van Gogh, 1889<p><p>Bandaged Ear Portrait</p><p>Post-Impressionism</p></div>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+  <div class="container">
+    <img src="https://i.imgur.com/dyC1Zs8.jpg" alt="Salvador Dali" style="width:100%">
+    <div class="overlay">
+    <div class="text"><p>Salvador Dali, 1930<p><p>The Hand</p><p>Surrealism</p></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+<!--The Assignment-->
+	 <div class="container-center">
+		<h2 style="background-color:#F5F5DC;">Case Study Project Instructions</h2>      
+      	<p><b>Steps and Requirements:</b><br><br>
+	1.) The first step is to select a painter, sculpter or mixed media artist from 				anywher within the last two centuries ( between 1800 to the present day). You 			<b>may NOT select any of the following artists: Van Gogh, Da Vinci, 					Michelangelo, Dali, Picasso, or Andy Warhol</b>. The purpose is to be creative  		and hone your research skills, so it is required that you select an artist we 			may not have heard of, or do not know as much about.<br><br>
+    2.)You may use any resources available to you to thoroughly research your selected 			artists life and work. I will also require that you properly cite your sources in 		  MLA format. There is no limit to the amount of sources however, you need to have           <b>at least 3.</b> Once you have gathered the information you will then write a           short essay between 1-2 pages outlining the life, history, work and influence of           the artist. Be sure to include in your essay the following information: name(s)           (if the artist had a allias or other name), birthdate and date of passing (if             applicable), years active, type of artistic movement they belong to (surrealism,           impressionism, realism, abstaract, ect.), the themes found in their work, and what         historical events at that time may have contributed to their work and or how               society might have been influenced by their work.<br><br>
+	3.) Lastly, you will assemble a short 5-10 minute presentation on your artist based on         your essay to present to the class.<br><br>
+    
+<!-- Form Instructions -->
+			<h3 style="background-color:#F5F5DC;">Enter your name and the artist you would like to research in the form below</h3>     
+            
+<!--form to input name and element choice-->
+		 <form id="signupform">
+			First and last name<input type="text" name="name"  id="learner_name"/><br />
+			Type the name of the artist you wish to explore <input type="text" name="artist"  id="learner_artist"/><br><br>
+            <input type="button" onclick="showList()" value="Reset form">
+         </form>
+		 
+<!--button to check if artist is in list already-->
+		 <button onclick="IsArtistChosen()">Sign up for artist</button><br>
+		
+<!-- Display Results -->
+		 <p id ="output"> </p><br>
+		 <p id ="list"> </p><br>
+	</div>
+
+<!-- Footer -->
+	<div class="footer">
+		<a href="https://jwelch3127.github.io/WebProOne/week3.html">Home Page</a>
+  	</div>
+</body>
+</html>
