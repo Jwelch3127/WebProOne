@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Art History Group Project Sign-Up</title>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Group Project Sign-Up Sheet</title>
+    
+<!--CSS Styling-->
+<style>
+body {background-color: #D2B48C}
+
+/* Header Styling */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #F5F5DC;
+  color:#654321;
+  font-size: 20px;
+}
+
+/* Text Styling */
+h1, h2, h3 {text-align: center;color:#654321;background: #F5F5DC;}
+p {color:black;}
+
+/* Creating Row for Images */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}  
+
+/* Display Properties for 3 images */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #F5F5DC;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: #654321;
+  font-size: 15px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);}
+  
+/* End of Image Display Properties */ 
+
+/* Form Field Styling */ 
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+input[type=button], input[type=submit], input[type=reset]
+{
+background-color: #F5F5DC;
+  border: none;
+  color: #654321;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #F5F5DC;
+  border: none;
+  color: #654321;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Footer Styling */ 
+.footer {
+  padding: 15px;
+  text-align: center;
+  background: #F5F5DC;
+  color:#654321;
+  font-size: 20px;
+}
+</style>
+<!-- End of CSS Styling -->
+  </head>
+  <body>
+  <!-- Start of HTML -->
+
+<!-- Header -->
+<div class="header">
+  <h1>Art History 101</h1>
+</div>
+
+<!--Header Image-->
+	<div class="topnav">
+		<img src = "https://i.imgur.com/GjxsxcZ.jpg" width="100%" align ="Center">
+		<h1 style="background-color:#F5F5DC;">Artistic Movements: Group Project</h1>
+        <p>Hover over the artwork to see some quick facts pertaining to each of the paintings:</p>
+	</div>
+   
+<!-- Three Images in Row and Display Information for Images -->
+	 <div class="row">
+  <div class="column">
+  <div class="container">
+    <img src="https://i.imgur.com/9Dkiv08.jpg" alt="Cambells Soup Cans-Andy Warhol" style="width:100%">
+     <div class="overlay">
+    <div class="text"><p>Andy Warhol, 1962<p><p>Cambell's Soup Cans</p><p>Pop Art</p></div>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+  <div class="container">
+    <img src="https://i.imgur.com/gK05gDT.jpg" alt="Van Gogh" style="width:100%">
+     <div class="overlay">
+    <div class="text"><p>Van Gogh, 1889<p><p>Bandaged Ear Portrait</p><p>Post-Impressionism</p></div>
+  </div>
+  </div>
+  </div>
+  <div class="column">
+  <div class="container">
+    <img src="https://i.imgur.com/dyC1Zs8.jpg" alt="Salvador Dali" style="width:100%">
+    <div class="overlay">
+    <div class="text"><p>Salvador Dali, 1930<p><p>The Hand</p><p>Surrealism</p></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+<!--The Assignment-->
+	 <div class="container-center">
+		<h2 style="background-color:#F5F5DC;">Group Project Instructions</h2>      
+      	<p><b>Steps and Requirements:</b><br><br>
+	1.) Each of you will be split into a group of four based on the five major artistic movements below. You may sign up for any of the five movements listed, however, once the group is full, you will be promted to select another. <br><br>
+    2.) Once all groups are decided, you and your partners will research your chosen artistic movement. You may use any resources available to your to complete your research. You will then put together a 20-25 minute presentation that you and your group will then deliver to your peers.<br><br>
+    3.) The presentations must be dynamic and utilizing at least one other medium other than PowerPoint. Alternative media can include: video, audio, handouts, etc. Finally the presentation must include a type of activity to engage the class.<br><br>
+    4.) Lastly, the presentation must respond to the following prompts: Who were the major contributors of these movements, where did they start, was there anything significant about the historical context that may have lead to the creation or popularization of the movement, what do you beleive might have happened if the movment never existed.<br><br>
+    
+<!-- Form Instructions and List of groups -->
+    <h1>Group Project Sign-Up Sheet</h1>
+    <p>Please type your first and last name into the box below and select a group from the dropdown that interests you. Please also note that each group should be made up of four individuals - this means that you will be prompted to select another group if the first you select is full.</p>
+    <input type="text" id="nameInput">
+    <select id="groupSelect">
+      <option value="">Select a group</option>
+       <option value="">Select a group</option>
+      <option value="1">Group 1:Impression and Post-Impressionism</option>
+      <option value="2">Group 2:Art Deco</option>
+      <option value="3">Group 3:Surrealism</option>
+      <option value="4">Group 4:Pop Art</option>
+      <option value="5">Group 5:Minimalism</option>
+    </select>
+    <button onclick="addName()">Sign Up</button>
+    <div id="groupList"></div>
+    
+<!--Start of JavaScript: Arrays, Loops-->
+
+<script>
+    
+/*Variables*/
+
+      let groups = [[], [], [], [], []];
+      const groupSize = 4;
+      
+/*Functions: Let, If, Else. For group sign-up.*/      
+
+      function addName() {
+        let name = document.getElementById("nameInput").value;
+        let groupSelect = document.getElementById("groupSelect");
+        let groupNum = groupSelect.value;
+        if (name.trim() === "") {
+          alert("Please enter your first and last name.");
+        } else if (groupNum === "") {
+          alert("Please select one of the 5 groups.");
+        } else {
+          let added = false;
+          if (groups[groupNum - 1].length < groupSize) {
+            groups[groupNum - 1].push(name);
+            added = true;
+          } else {
+            alert("Sorry, that group is full.");
+          }
+          if (added) {
+            document.getElementById("nameInput").value = "";
+            groupSelect.value = "";
+            updateGroups();
+            alert("Thanks for signing up, " + name + "!");
+          }
+        }
+      }
+/*Loops, Lists for Groups. Will add name to the list.*/
+
+      function updateGroups() {
+        let groupList = document.getElementById("groupList");
+        groupList.innerHTML = "";
+        for (let i = 0; i < groups.length; i++) {
+          let groupHeader = document.createElement("h2");
+          groupHeader.textContent = "Group " + (i + 1);
+          groupList.appendChild(groupHeader);
+          let groupUl = document.createElement("ul");
+          for (let j = 0; j < groups[i].length; j++) {
+            let groupLi = document.createElement("li");
+            groupLi.textContent = groups[i][j];
+            groupUl.appendChild(groupLi);
+          }
+          groupList.appendChild(groupUl);
+        }
+      }
+    </script>
+  </body>
+</html>
+<!--End of Javascript-->
+
+
+
