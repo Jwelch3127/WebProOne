@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Start of CSS Styling-->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles */
+	body {
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+        background-color: #f2f2f2; }
+/*Menu Styles*/
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #95c4d4;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.menu a:hover {
+  color: white;}
+
+/*Main Content Styles*/
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  color: black;
+}
+
+/* Styling for right panel
+this will probably be for some type of "about the content or something*/ 
+
+.right {
+  background-color: #95c4d4;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+  color: black;
+}
+
+/*Creating nice border for quiz*/
+
+/*Quiz Styling*/
+.quiz {
+	margin: 20px 0;
+	padding: 20px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+}
+.quiz h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.quiz p {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.quiz ol li {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.quiz ol li span {
+	font-weight: bold;
+}
+.quiz label {
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 16px;
+}
+.quiz label input[type="radio"] {
+	display: none;
+}
+.quiz label .bubble {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+.quiz label input[type="radio"]:checked + .bubble:after {
+	content: "";
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #0077cc;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+.quiz button {
+	margin-top: 20px;
+	padding: 10px;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+/* End of CSS */
+</style>
+</head>
+
+<!-- HTML Begins -->
+
+<!-- Basically styling the header-->
+<div style="background-color:#d6c865;padding:15px;text-align:center; color:black;">
+  <h1>The Power of You! Stress Management</h1>
+</div>
+<!-- Menu Bar HTML 
+These links should work, but they don't. They need to be investigated - so for now they are just place holders.-->
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href=http://jswelch3127.github.io/WebProOne/Supplemental/Final.Page1.html>Deep Breathing </a>
+    <a href=http://jswelch3127.github.io/WebProOne/Supplemental/Final.Page2.html> Meditation</a>
+     <a href=http://jswelch3127.github.io/WebProOne/Supplemental/Final.Page3.html> Exercise</a>
+     <a href=http://jswelch3127.github.io/WebProOne/Supplemental/Final.Page4.html>Time Management</a>
+     <a href=http://jswelch3127.github.io/WebProOne/Supplemental/Final.Page5.html>Social Support</a>
+     </div>
+ 
+<!-- Main Content -->
+  <div class="main">
+<!-- Intro and Description of Stress Management -->
+    <h2>What is Stress Management?</h2>
+    <p>Welcome to the wonderful world of stress management. Stress Management is the practice of using strategies to reduce the negative effects of stress on the mind and body. It involves techniques such as deep breathing, meditation, exercise, time management, and social support.Here you will begin your knowledge journey of what these strategies are, and take some time to reflect on your own stress. Feel free to explore and crush stress today!</p><br><br>
+    
+ <!-- JavaScript Quiz -->
+    <section>
+        <h2>Take the Stress Management Quiz</h2>
+        <p>Answer the following questions to determine your stress level.</p>
+        <form id="quiz-form">
+        <!--Questions-->
+        <div class="quiz">
+        <h2>Stress Quiz</h2>
+<p>Answer the following questions:</p>
+<ol>
+<li>
+<!-- Question 1 -->
+  <span> Do you feel like you have no control?</span>
+  <label>
+    <input type="radio" name="q1" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q1" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 2 -->
+  <span> Do you find it difficult to stop worrying?</span>
+  <label>
+    <input type="radio" name="q2" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q2" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 3 -->
+  <span> Do you feel like something bad is going to happen?</span>
+  <label>
+    <input type="radio" name="q3" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q3" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 4 -->
+  <span> Do you feel like you never have enough time?</span>
+  <label>
+    <input type="radio" name="q4" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q4" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 5 -->
+  <span>Are you worried about many things?</span>
+  <label>
+    <input type="radio" name="q5" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q5" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+</ol>
+<!-- Submit (will need to style the button with css) -->
+<button type="submit">Submit</button>
+</div>
+
+<!-- Begining of the Java Script Calling functions and such -->
+        </form>
+        <div id="quiz-response"></div>
+         <script>
+  const form = document.getElementById("quiz-form");
+  const responseDiv = document.getElementById("quiz-response");
+  let yesAnswers = 0;
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); /* This will prevent page reload on form submission */
+
+    /* count the number of "yes" answers, in order to provide feedback on stress levels based on how many questions are answered yes too. */
+    yesAnswers = 0;
+    const inputs = form.querySelectorAll("input[type=radio]:checked");
+    inputs.forEach(function(input) {
+      if (input.value === "yes") {
+        yesAnswers++;
+      }
+    });
+
+    // show response based on number of "yes" answers
+    if (yesAnswers === 0) {
+      responseDiv.textContent = "Great! Sounds like you are already enacting stress management strategies, but it cannot hurt to learn more. Visit the navigation panel to view details about some effective strategies to crush your stress.";
+    } else if (yesAnswers >= 2 && yesAnswers <= 3) {
+      responseDiv.textContent = "Not bad! Looks like you may be on the right track in your stress management, but everyone can use some help now and then. Visit the navigation panel to learn more about effective strategies to crush your stress.";
+    } else if (yesAnswers === 5) {
+      responseDiv.textContent = "Looks like your stress management needs some work, but not to worry, everyone struggles every now and then. Visit the navigation panel to learn more about effective strategies to crush that stress!";
+    }
+  });
+</script> 
+  </div>
+<!-- About Column or extra info, I don't know yet what to do with it. Its kind of a place holder for now-->
+  <div class="right">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+</div>
+<!-- We have at last reached the footer--> 
+
+
+<div style="background-color:#d6c865;text-align:center;padding:10px;margin-top:7px; color:black;">© copyright James Welch</div>
+
+<!-- Side Note: This was the hardest assignment yet. I used forums, w3schools, and ChatGPT to debug, check, work and rework code. I also really started with a disadvantage by overcomplicating.-->
+</body>
+</html>
+
