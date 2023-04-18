@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Cascading Style Sheets-->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles */
+	body {
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+        background-color: #f2f2f2; }
+        
+/*Menu Styles*/
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #95c4d4;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.menu a:hover {
+  color: white;}
+
+/*Main Content Styles*/
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  color: black;
+}
+
+/* Styling for right panel: Statistics Bar*/ 
+
+.right {
+  background-color: #95c4d4;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+  color: black;
+}
+
+/*Image Styling*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Creating nice border for quiz*/
+
+/*Quiz Styling*/
+.quiz {
+	margin: 20px 0;
+	padding: 20px;
+	border: 2px solid #d6c865;
+	border-radius: 10px;
+}
+.quiz h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.quiz p {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.quiz ol li {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.quiz ol li span {
+	font-weight: bold;
+}
+.quiz label {
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 16px;
+}
+.quiz label input[type="radio"] {
+	display: none;
+}
+.quiz label .bubble {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid #d6c865;
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+.quiz label input[type="radio"]:checked + .bubble:after {
+	content: "";
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #d6c865;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+.quiz button {
+	margin-top: 20px;
+	padding: 10px;
+}
+
+/*Accordion Styling*/
+
+.accordion {
+  background-color: #95c4d4;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: white;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #d3d3d3;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* Panel Style - after accordion is opened */
+.panel {
+  padding: 0 18px;
+  background-color: #d9d9d9 ;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+  
+/*Media Queries*/
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+/* End of CSS */
+</style>
+</head>
+
+<!-- HTML Begins -->
+
+<!-- Basically styling the header-->
+<div style="background-color:#d6c865;padding:15px;text-align:center; color:black;">
+  <h1>The Power of You! Stress Management</h1>
+</div>
+<!-- Menu Bar HTML: Links further down the page. Instead of linking to additonal pages, it takes you down to main content-->
+<div style="overflow:auto">
+  <div class="menu">
+  <p style="background-color:#95c4d4;">Use the search menu to explore the various strategies</p>
+    <a href="#About">About</a>
+    <a href="#Deep Breathing">Deep Breathing </a>
+    <a href="#Meditation">Meditation</a>
+    <a href="#Exercise">Exercise</a>
+    <a href="#Time Management">Time Management</a> 
+    <a href="#Social Support">Social Support</a>
+     </div>
+ 
+<!-- Main Content -->
+  <div class="main">
+<!-- Intro and Description of Stress Management -->
+    <h2>What is Stress and What is Stress Management?</h2>
+    
+<!--Top Image -->
+   <img src="https://i.imgur.com/2cIK2Hp.jpg" alt="Stress" style="width:50%">
+ 
+<!--Introduction-->
+    <p><b>Introduction</b><br><br>Welcome to the wonderful world of stress management! Sadly enough, stress is far too common. We have stress at work, stress in relationships, stress everywhere. The issue with this, is that stress <b>is</b> an epidmemic that has been scientifically proven to be detrimental to both mental and physical health. Therefore, wwhen it comes to stress, it is important to be preventative - so what can we do.<br> 
+
+<!--Stress Definition-->
+    <br><b>What is Stress?</b><br>
+    <p>The first step to understanding stress management is defining what stress actually is. While  actual definitions of stress vary by individual, The American Institute of Stress provides a couple common definitions. Those definistions are: the <i>“physical, mental, or emotional strain or tension.”</i> And, <i>“a condition or feeling experienced when a person perceives that demands exceed the personal and social resources the individual is able to mobilize.”</i></p>
+
+<!--Diagram Image-->
+<img src="https://i.imgur.com/0fEGqiG.png" alt="Diagram of Stress Impact on the Body" style="width:60%">
+
+<!--Definition of Stress Management-->
+    <br><b>Defining Stress Management</b><br>
+    <p>Stress Management is the practice of using strategies to reduce the negative effects of stress on the mind and body. It involves techniques such as deep breathing, meditation, exercise, time management, and social support.Here you will begin your knowledge journey of what these strategies are, and take some time to reflect on your own stress. Use these resources to explore and crush stress today!</p><br>
+
+    
+ <!-- JavaScript Quiz -->
+    <section>
+        <h2>How is your stress management? Take the quiz to find out!</h2>
+        <p>Select "yes" or "no" for each of the following questions to see how well you manage stress, click <b>"submit"</b> when finished, or select <b>"Reset"</b> to reset the quiz.<br><br>From there, feel free to use the navigation bar on the right to review tips and information regarding stress management.</p>
+        <form id="quiz-form">
+        <!--Questions-->
+        <div class="quiz">
+        <h2>Stress Quiz</h2>
+<p>Answer the following questions:</p>
+<ol>
+<li>
+<!-- Question 1 -->
+  <span> Do you feel like you have no control?</span>
+  <label>
+    <input type="radio" name="q1" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q1" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 2 -->
+  <span> Do you find it difficult to stop worrying?</span>
+  <label>
+    <input type="radio" name="q2" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q2" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 3 -->
+  <span> Do you feel like something bad is going to happen?</span>
+  <label>
+    <input type="radio" name="q3" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q3" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 4 -->
+  <span> Do you feel like you never have enough time?</span>
+  <label>
+    <input type="radio" name="q4" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q4" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+<li>
+<!-- Question 5 -->
+  <span>Are you worried about many things?</span>
+  <label>
+    <input type="radio" name="q5" value="yes">
+    <span class="bubble"></span>
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="q5" value="no">
+    <span class="bubble"></span>
+    No
+  </label>
+</li>
+</ol>
+<!-- Submit and Reset Button -->
+<button type="submit">Submit</button>
+<button type="button" id="reset-button">Reset</button>
+</div>
+
+<!-- Begining of the Java Script Calling functions and such for Form -->
+        </form>
+        <div id="quiz-response"></div>
+         <script>
+  const form = document.getElementById("quiz-form");
+  const responseDiv = document.getElementById("quiz-response");
+  let yesAnswers = 0;
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); /* This will prevent page reload on form submission */
+
+    /* count the number of "yes" answers, in order to provide feedback on stress levels based on how many questions are answered yes too. */
+    yesAnswers = 0;
+    const inputs = form.querySelectorAll("input[type=radio]:checked");
+    inputs.forEach(function(input) {
+      if (input.value === "yes") {
+        yesAnswers++;
+      }
+    });
+
+    // show response based on number of "yes" answers
+    if (yesAnswers === 0) {
+      responseDiv.textContent = "Great! Sounds like you are already enacting stress management strategies, but it cannot hurt to learn more. Visit the navigation panel to view details about some effective strategies to crush your stress.";
+    } else if (yesAnswers >= 2 && yesAnswers <= 3) {
+      responseDiv.textContent = "Not bad! Looks like you may be on the right track in your stress management, but everyone can use some help now and then. Visit the navigation panel to learn more about effective strategies to crush your stress.";
+    } else if (yesAnswers === 5) {
+      responseDiv.textContent = "Looks like your stress management needs some work, but not to worry, everyone struggles every now and then. Visit the navigation panel to learn more about effective strategies to crush that stress!";
+    }
+  });
+  const resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", function() {
+  /* Reset all radio buttons to their unchecked state */
+  const inputs = form.querySelectorAll("input[type=radio]");
+  inputs.forEach(function(input) {
+    input.checked = false;
+  });
+
+  /* Reset the quiz response text */
+  responseDiv.textContent = "";
+
+  /* Reset the count of "yes" answers */
+  yesAnswers = 0;
+});
+</script> 
+   </div>
+   
+<!-- Side Column that provides some statistics on stress provided by the American Institute of Stress (with Link included)-->
+  <div class="right">
+    <h2>Stats on Stress</h2>
+    <p>According to the <a href="http://www.stress.org">The American Institute of Stress</a>
+    <br><br><b>About 33% of people</b> report feeling extreme stress<br>
+    <br><b>77% of people</b> experience stress that effects their physical health<br>
+    <br><b>73% of people</b> have stress that impacts their mental health<br>
+    <br><b>48% of people</b> have trouble sleeping because of stress.<br><br></p>
+  </div>
+    </div>
+
+
+<!--Accordion Pages-->
+
+<!--Deep Breathing Information-->
+<button class="accordion" id="Deep Breathing">Deep Breathing</button>
+<div class="panel">
+
+<!--Title-->
+<h1>Breath the Free Air</h1>
+
+<!--Image-->
+<img src="https://i.imgur.com/utBGU1Y.jpg" alt="man deeply breathing" style="width:50%">
+
+<!--Description-->
+<p><b>Description:</b></p>
+<p>There are many types of breathing techniques, however, one of the most common for stress relief is, Diaphragmatic breathing. This type of breathing is also known as belly breathing or deep breathing, and is a breathing technique that involves the contraction and relaxation of the diaphragm muscle to promote deep and efficient breathing. The diaphragm muscle is located at the base of the lungs and is responsible for controlling breathing. During diaphragmatic breathing, the diaphragm muscle contracts and moves downward, allowing the lungs to expand and fill with air.</p> 
+
+<p>This type of breathing is often used in relaxation exercises and is believed to help reduce stress, anxiety, and muscle tension. It is also used in various forms of meditation and mindfulness practices.</p>
+
+<!--Benefits-->
+<p><b>Benefits:</b></p>
+<p>There are many benefits of breathing exercises that have been documented in studies. Some of these benefits include:</p> 
+
+<ul>
+<li>Reversing the stress response once it occurs.</li>
+<li>Helps you to be less reactive in stressful situations.</li>
+<li>Improving digestion.</li>
+<li>Improving focus.</li>
+<li>Improving sleep.</li>
+<li>Faster recovery.</li>
+<li>Reducing anxiety.</li>
+<li>And can help with depression.</li>
+</ul>
+
+<!--Video-->
+<p><b>Watch this video for tips on breathing techniques!</b></p>
+  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5yaulf91W44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+
+<!--Additional Resources-->
+<p><b>Additional Resources:</b></p>
+<ul>
+<li><a href="http://www.verywellmind.com">Very Well Mind</a></li>
+<li><a href="https://www.verywellmind.com/how-to-reduce-stress-by-deep-breathing-2797585#:~:text=Try%20deep%20breathing%20as%20a%20part%20of%20Pilates.,such%20as%20sleep%2C%20pain%20control%2C%20and%20even%20digestion.">Very Well Mind - Deep Breathing</a></li>
+<li><a href="https://www.verywellmind.com/the-benefits-of-deep-breathing-5208001">Very Well Mind - Benefits of Deep Breathing</a></li>
+</ul>
+<br><br> 
+</div>
+
+<!--End of Deep Breathing Information-->
+
+<!--Meditation Information-->
+
+<button class="accordion" id="Meditation">Meditation</button>
+<div class="panel">
+
+<!--Title-->
+<h1>Inner Peace and Relaxation through Meditation</h1>
+
+<!--Image-->
+<img src="https://i.imgur.com/xo1rmYo.jpg" alt="man deeply breathing" style="width:50%">
+
+
+<!--Description-->
+<p><b>Description:</b></p>
+  <p>Meditation is a stress management technique that involves focusing the mind on a particular object, thought, or activity to achieve a mentally clear and emotionally calm state. The practice of meditation can take many forms, including mindful breathing, guided visualization, or repeating a mantra. During meditation, the individual typically sits in a comfortable position with their eyes closed or fixed on a particular object while they allow thoughts to come and go without judgment. This helps to calm the mind and reduce the effects of stress on the body.</p>
+  
+<p>Meditation has been shown to have numerous benefits for mental and physical health, including reducing anxiety and depression, improving sleep quality, and lowering blood pressure. Regular meditation practice can also improve emotional resilience and help individuals cope better with the challenges of daily life. It is a simple yet powerful technique that can be done almost anywhere and at any time, making it an accessible and effective tool for managing stress.</p>
+  
+<!--Benefits-->
+<p><b>Benefits:</b></p>
+<ul>
+<li>Gaining a new perspective on stressful situations.</li>
+<li>Building skills to manage your stress.</li>
+<li>Increasing self-awareness.</li>
+<li>Focusing on the present.</li>
+<li>Reducing negative emotions.</li>
+<li>Increasing imagination and creativity.</li>
+<li>Increasing patience and tolerance.</li>
+<li>Lowering resting heart rate.</li>
+<li>Lowering resting blood pressure.</li>
+<li>Improving sleep quality.</li>
+<ul>
+
+<!--Video-->
+<p><b>Watch this video for tips on breathing techniques</b></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZToicYcHIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+
+<!--Additional Resources-->
+<p><b>Additional Resources:</b></p>
+<ul>
+<li><a href="https://www.mayoclinic.org/tests-procedures/meditation/in-depth/meditation/art-20045858">Mayo Clinic - Meditation: A simple way to reduce stress</a></li>
+</ul>
+<br><br>
+</div>
+
+<!--End of Deep Motivation-->
+
+<!--Exercise Informaiton-->
+
+<button class="accordion" id="Exercise">Exercise</button>
+<div class="panel">
+
+<!--Title-->
+<h1>When in Doubt, Work It Out</h1>
+
+<!--Image-->
+<img src="https://i.imgur.com/w614eTJ.jpg" alt="cycle class" style="width:50%">
+
+
+<!--Description-->
+<p><b>Description:</b></p>
+<p>Exercise can be defined as any physical activity that is done to maintain or improve health and fitness. In the context of stress management, exercise refers to any physical activity that is performed to reduce stress and promote relaxation. Exercise can help to reduce the physical and psychological symptoms of stress by releasing endorphins, which are natural chemicals that help to boost mood and reduce pain. Additionally, exercise can help to improve sleep quality, increase energy levels, and enhance overall well-being, all of which can contribute to reducing stress.</p>
+<p>Examples of excersie helpful for stress management can include:</p>
+<ul>
+<li>aerobic activities like running or cycling</li>
+<li>running or cycling</li>
+<li>strength training</li>
+<li>Yoga and Meditating</li>
+</ul>
+ 
+<!--Benefits-->
+<p><b>Benefits:</b></p>
+<p>Exercise increases your overall health and your sense of well-being, which puts more pep in your step every day. But exercise also has some direct stress-busting benefits. These benefits include:</p>
+
+<ul>
+<li>Pumps up your endorphins</li>
+<li>It reduces negative effects of stress</li>
+<li>Its meditation in motion</li>
+</ul>
+
+<!--Video-->
+<p><b>Watch this video to learn more about exercise for stress management</b></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ae9fF7pnkfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!--Additional Resources-->
+<p><b>Additional Resources:</b></p>
+<ul>
+<li><a href="https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/exercise-and-stress/art-20044469#:~:text=Exercise%20and%20stress%20relief%201%20It%20pumps%20up,motion.%20...%204%20It%20improves%20your%20mood.%20">Mayo Clinic - Exercise and Stress</a>
+</ul>
+</div>
+
+<!--End of Exercise-->
+
+<!--Time Management Informaiton-->
+
+<button class="accordion" id="Time Management">Time Management</button>
+<div class="panel">
+
+<!--Title-->
+<h1>Always a Good Time to Practice Time Management</h1>
+
+<!--Image-->
+<img src="https://i.imgur.com/j5nr5pb.jpg" alt="cycle class" style="width:50%">
+
+<!--Description-->
+<p><b>Description:</b></p>
+  <p>Time management refers to the practice of planning and organizing one's activities in a way that maximizes productivity and efficiency while minimizing stress and anxiety. Time management skills can help individuals reduce stress by allowing them to complete tasks more efficiently, prioritize activities, and avoid procrastination. By managing their time effectively, individuals can also create more opportunities for leisure activities and self-care, which can help to reduce stress and promote overall well-being.</p>
+
+<!--Benefits-->
+<p><b>Benefits:</b></p>
+<p>It is important to make time for you, this can be accomplished through managing time more wiesely. Veiw some of the benefits to time management below:</p>
+<ul>
+<li>Helps to reduce stress by providing structure and organization to daily activities.  </li>
+<li>Enables individuals to prioritize tasks and focus on important activities, which can reduce feelings of overwhelm and anxiety.</li>
+<li>Can improve productivity and efficiency, which can reduce stress related to feeling overworked or not having enough time.</li>
+<li>Provides more opportunities for self-care activities, such as exercise or hobbies, which can help to reduce stress and promote relaxation.</li>
+<li>Increases feelings of control and mastery over one's life, which can reduce stress related to feeling overwhelmed or out of control.</li>
+<li>Can improve overall quality of life by reducing stress and increasing feelings of satisfaction and fulfillment.</li>
+</ul>
+
+<!--Video-->
+<p><b>Watch this video to learn more about tips on effectivly managing your time</b></p> <p>Successful time management practices will help you to be more proactive, productive and less stressed.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RiI1NkaDXlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!--Additional Resources-->
+<p><b>Additional Resources:</b></p>
+<p>For more information, you can view these videos available through YouTube.<p>
+<ul>
+<li><a href="https://www.bing.com/videos/search?q=youtube+video+on+time+management&docid=603484583478262562&mid=1CE04962C5E50E3831E21CE04962C5E50E3831E2&view=detail&FORM=VIRE">Philosophy of Time Management</a></li>
+
+<li><a href="https://www.bing.com/videos/search?q=youtube+video+on+time+management&docid=603489127553450735&mid=E87A734A86902B4D5EE8E87A734A86902B4D5EE8&view=detail&FORM=VIRE">10 Time Management Tips</a></li>
+
+<li><a href="https://www.bing.com/videos/search?q=youtube+video+on+time+management&docid=603484635017331472&mid=6BEE9E47CFC00D169E166BEE9E47CFC00D169E16&view=detail&FORM=VIRE">Time Management - Soft Skills/Skill Training</a></li>
+</ul>
+</div>
+
+<!--End of Time Management-->
+
+<!--Social Support Information-->
+
+<button class="accordion" id="Social Support">Social Support</button>
+<div class="panel">
+
+<!--Title-->
+<h1>Get Out, Get Social</h1>
+
+<!--Image-->
+<img src="https://i.imgur.com/WTORzNy.jpg" alt="cycle class" style="width:50%">
+
+<!--Description-->
+<p><b>Description:</b></p>
+  <p>Social support refers to the assistance and encouragement that individuals receive from friends, family, and other social connections. Social support can come in many forms, including emotional support (e.g., listening and offering empathy), informational support (e.g., offering advice or guidance), and tangible support (e.g., providing practical assistance or resources). Social support can help individuals cope with stress by providing a sense of connection, belonging, and validation, as well as practical assistance and resources to help manage stressors.</p>
+
+<!--Benefits-->
+<p><b>Benefits</b></p>
+<p>Maintaining social health can be a key factor in mitigating or lessening stress. Some of the Benefits are listed below:</p>
+<ul>
+<li>Provides emotional support and validation, which can help to reduce feelings of isolation and loneliness, and promote feelings of connection and belonging.</li>
+
+<li>Offers practical assistance and resources to help manage stressors, such as helping with household tasks or providing financial support.</li>
+
+<li>Provides an opportunity to share experiences and gain perspective on stressors, which can help to reduce feelings of overwhelm and anxiety.</li>
+
+<li>Offers a sense of security and stability, which can help to reduce stress related to uncertainty or instability.</li>
+
+<li>Helps to improve coping skills and resilience, by providing examples of positive coping strategies and offering support during difficult times.</li>
+
+<li>Can improve overall well-being and quality of life, by promoting feelings of connection and support, and reducing stress and anxiety.</li>
+</ul>
+
+
+<!--Video-->
+<p><b>Watch this video provided by USF Counseling and Psychological Services</b></p>
+<p>in order to learn more about the benefits, importants and implimentation of social support and its role in stress management.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aF1wzqmCgAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!--Additional Resources-->
+<p><b>Additional Resources:</b></p>
+<p>Learn more about the importants of social support and soical health by reviewing these helpful links:</p>
+<ul>
+<li><a href="https://www.nih.gov/health-information/social-wellness-toolkit">Social Wellness Toolkit</a></li>
+<li><a href="https://www.verywellmind.com/social-support-for-psychological-health-4119970#:~:text=A%20few%20examples%20of%20social%20support%20include%3A%201,when%20they%20are%20struggling%20with%20feelings%20of%20depression">How Social Support Contributes to Psych Health</a></li>
+<li><a href="https://www.apa.org/topics/stress/manage-social-support">Manage Stress: Strengthen Social Network</a></li>
+<li><a href="https://www.helpguide.org/articles/stress/social-support-for-stress-relief.htm">Social Support for Stress Relief</a></li>
+</ul>
+</div>
+
+<!--End of Social Support-->
+
+<!--About Information-->
+
+<button class="accordion" id="About">About</button>
+<div class="panel">
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h1>Your Title Here</h1>
+</header>
+
+<!--Accordion Content-->
+<button class="accordion" id="About">About</button>
+<div class="panel">
+  <!--Title-->
+  <h2>About Information</h2>
+  <!--Content-->
+  <p>Insert your about information here.</p>
+</div>
+
+<!--End of About Section-->
+
+<!--JS for Accordion "Dynacism"-->
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+    
+<!-- Footer includes name, copyright logo, and current date display courtesy of JS--> 
+
+<div style="background-color:#d6c865;text-align:center;padding:10px;margin-top:7px; color:black;"><p>James Welch © copyright</p><p id="current-date"></p></div>
+
+<!--JS to display current date-->
+<script>
+const currentDate = new Date();
+const day = currentDate.getDate();
+const month = currentDate.getMonth() + 1;
+const year = currentDate.getFullYear();
+
+const dateString = month + '/' + day + '/' + year;
+
+document.getElementById('current-date').innerHTML = dateString;
+</script>
+
+<!--The End!!-->
+
+
+<!-- Author Note: This project was created with the accumulated knowledge gained from the EME6930 Web Programming I Course and several resources including: stack-developer forums, w3schools.com and ChatGPT.-->
+
+</body>
+</html>
