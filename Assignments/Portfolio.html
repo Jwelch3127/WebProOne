@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-color: #F3F3F3;	
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+background-color: #CFC493;.text-box {
+  background-color: #006747;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+color:black;
+padding: 20px;
+text-align: center;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #006747;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+ /*Image Styling*/
+img {
+  display: block;
+  float: left; 
+  width: 40%; 
+  margin-right: 20px;
+  margin-left:20px;
+  border: 5px solid #CFC493; 
+  border-radius: 20px; 
+  padding: 10px;
+  max-width: 50%; 
+  height: auto;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.text-box {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #006747;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/*Button Styling*/
+button {background-color: #CFC493;color: #FFFFFF; padding: 10px 20px; border-radius: 25px;}
+
+/*Read More - Hide*/
+#more1 {display: none;}
+#more2 {display: none;}
+#more3 {display: none;}
+#more4 {display: none;}
+
+@media screen and (max-width: 768px) {
+  .text-box {
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+</style>
+</head>
+<body>
+<div class="header">
+ <h1>Portfolio for EME 6930 Web Programming I</h1>
+  <h2>Part of the Learning Design and Technology Graduate Program</h2>
+  <p>Spring 2023 (January - April)</p>
+</div>
+
+<!--Top Navigation For Spring 23 Assingments-->
+<div class="topnav" id="myTopnav">
+  <a href="filler">Home</a> 	
+  <a href=https://jwelch3127.github.io/WebProOne/Week1.html>Week 0</a>
+  <a href=https://jwelch3127.github.io/WebProOne/Week2>Week 1</a>
+  <a href=https://jwelch3127.github.io/WebProOne/week3.html>Week 2</a>
+  <a href=https://jwelch3127.github.io/WebProOne/week4.html>Week 3</a>
+  <a href=https://jwelch3127.github.io/WebProOne/week4java.html>Week 4</a>
+  <a href=https://jwelch3127.github.io/WebProOne/Week5.1.html>Assignment 5</a>
+  <a href=https://jwelch3127.github.io/WebProOne/Week5B.index.html>Week 5B</a>
+  <a href=https://jwelch3127.github.io/WebProOne/Week6.html>Week 6</a>
+  <a href=https://jwelch3127.github.io/WebProOne/week7.html>Week 7</a>
+  <a href=https://jwelch3127.github.io/WebProOne/week8.html>Week 8</a>
+  <a href=https://jwelch3127.github.io/WebProOne/week8B.html>Week 9</a>
+  <a href=https://jwelch3127.github.io/WebProOne/Supplimental/Final.PartI.html>Final-I</a>
+  <a href=https://jwelch3127.github.io/WebProOne/Supplimental/FinalPtII.html>Final-II</a>
+  <a href="filler">Final-Complete</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+</div>
+
+<!--JS to control responsive navigation bar-->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<!--End responsive Nav JS-->
+
+<!--Welcome Anouncement: Header 2-->
+<div style="padding-left:16px">
+  <h2 style="text-align:center" >Welcome to my about Page!</h2>
+  <p style="text-align:center" >Click the links above to view each of the web projects I have completed over the Spring 2023 semester.</p>
+</div>
+
+<!--Image of Myself-->
+<div class="image-container">
+<img src="https://i.imgur.com/sZkrJf0.jpg" alt="image description">
+
+
+<!--Text box 1: Overview-->
+<div class="text-box">
+<h3>Overview</h3>
+<p>My name is James Welch and I am a first-year student in the MS Learning Desing and Technology course, and this spring marks my start of the program<span id="dots1">...</span><span id="more1">I currently work for USF as a course coordinator for the Psychology Department with the St. Pete campus and have done so for over 2 years now. It is my hope that the work I do in this program can assist in acheiving my dream of being a learning designer.</span>
+<button onclick="myOverview()" id="myBtn1">Read more</button></p>
+  </div>
+  
+<!--Text box 2: Project Description and Purpose-->
+  <div class="text-box">
+  <h3>Final Project Description</h3>
+  <p>My Final Assignment in the Web Programming I course, was to create a fully responsive webpage or simple website using HTML, CSS, and JavaScript. The other part was that the topic or content had to relate to education.<span id="dots2">...</span><span id="more2">For my final I decided to create a simple webpage that provides tips and in depth looks at five stress management strategies. The concept came about as I was stressed out by my finals (who isn't) as well as my own understanding of mental health (and how it affects me personally). Within the last few years, this country has suffered a great deal of hardship that has permiated every aspect of our lives. With expectations, news, media and this overwhelming world in which we exist, stress, I imagine, is on the rise - which makes it an epidemic (in my opinion). This makes understanding stress and coping with it of the utmost importance. I wanted to provide content that can be used to benefit others. I wanted to use this project as an opportunity to not just apply the skills learned in this course, but to develope a useful and practical learning device.</span>  
+<button onclick="myDescription()" id="myBtn2">Read more</button></p>
+</div>
+  
+<!--Text box 3: Greatest Takeaways--> 
+  <div class="text-box">
+  <h3>Takeaways</h3>
+  <p>The purpose of this assingment was to create a educational webpage or simple website based on all of the concepts learned and practiced througout the semester.<span id="dots3">...</span><span id="more3">I would count all of the experiences and concepts I gained as invaluable in helping to shape and pave my way as I continue my studies in hopes of obtaining my education and career oriented goals. I have gained new skills in being able to understand and write simple computer webpages and sites using the key components of web desing including: hyper-text mark-up language (HTML), cascading style sheets (CSS) and JavaScript (JS).</span>
+<button onclick="myTakeaway()" id="myBtn3">Read more</button></p>
+</div>
+  
+<!--Text box 4: Future Goals and Aspirations-->
+<div class="text-box">
+<h3>Future Goals</h3>
+<p>As a 30 year old who is finally discovering what they want to do and completely reshaping their career goals by breaking into the tech field, this course has been revelutionary.<span id="dots4">...</span><span id="more4">I think that computer programing and computer language is a highly valuable and meaningful skill. My future goals include possibly earning a Ph.D. as well as entering my dream career of learning design. I hope to help future generations of students by helping to create and build engaging, powerful learning and educational tools and content suited to aiding student success and achievement. It is my hope that I can continue my studies and help to partake in the shaping of ecuation in the future.</span>
+<button onclick="myGoals()" id="myBtn4">Read more</button></p>
+</div>
+</div>
+  
+<!--End of text box content-->
+
+
+<!--JS to control "read more" buttons-->
+
+
+<script>
+/*JS for Text Block 1*/
+
+function myOverview() {
+  var dots = document.getElementById("dots1");
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+/*JS for Text Block 2*/
+function myDescription() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+/*JS for Text Block 3*/
+function myTakeaway() {
+  var dots = document.getElementById("dots3");
+  var moreText = document.getElementById("more3");
+  var btnText = document.getElementById("myBtn3");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+/*JS for Text Block 4*/
+function myGoals() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<!--End JS controls for read more/less buttons-->
+
+<!-- Footer includes name, copyright logo, and current date display courtesy of JS--> 
+
+<div style="background-color:#CFC493;text-align:center;padding:10px;margin-top:7px; color:black;">
+  <p>James Welch © copyright</p>
+  <p id="current-date"></p>
+  <a href="Home" style="display: inline-block; background-color: #006747; color: #FFFFFF; padding: 10px 20px; border-radius: 25px;">Home</a>
+</div>
+
+<!--JS to display current date-->
+<script>
+const currentDate = new Date();
+const day = currentDate.getDate();
+const month = currentDate.getMonth() + 1;
+const year = currentDate.getFullYear();
+
+const dateString = month + '/' + day + '/' + year;
+
+document.getElementById('current-date').innerHTML = dateString;
+</script>
+
+
+</body>
+</html>
+
+
